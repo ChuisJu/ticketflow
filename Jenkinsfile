@@ -23,7 +23,7 @@ pipeline {
           steps { sh 'npm ci' ; sh 'npm test -- --coverage' }
         }
         stage('SAST') {
-          agent { docker { image 'returntocorp/semgrep:1.60.0' } }
+          agent { docker { image 'returntocorp/semgrep:latest' } }
           steps { sh 'semgrep --config=auto --severity ERROR --error' }
         }
         stage('SCA deps') {
