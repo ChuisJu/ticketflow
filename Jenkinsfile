@@ -2,7 +2,7 @@ pipeline {
   agent none
   options { timestamps(); timeout(time: 20, unit: 'MINUTES') }
   environment {
-    IMAGE = "registry.local/ticketflow:${env.GIT_COMMIT.take(8)}"
+    IMAGE = "registry.local/ticketflow:${env.BUILD_NUMBER}"
   }
   stages {
 
