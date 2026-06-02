@@ -1,0 +1,29 @@
+{
+  "name": "ticketflow",
+  "version": "1.0.0",
+  "description": "Application de gestion de tickets de support — projet support du TD Module 03 (Ascent Formation)",
+  "license": "MIT",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "node src/server.js",
+    "lint": "eslint .",
+    "test": "jest",
+    "build": "node scripts/build.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/server.js"
+    ]
+  }
+}
